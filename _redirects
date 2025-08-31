@@ -1,9 +1,3 @@
-# Netlify Forms redirects
+# Netlify Forms success page
 /thank-you /thank-you.html 200
 /thank-you/ /thank-you.html 200
-
-# Ensure direct access works
-/thank-you.html /thank-you.html 200
-
-# Handle trailing slashes
-/* /index.html 200

@@ -66,6 +66,13 @@
     
 </head>
 <body>
+    <!-- Formulario oculto para detección de Netlify Forms -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="company" />
+        <textarea name="message"></textarea>
+    </form>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -462,7 +469,7 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <!-- Campo honeypot anti-spam (oculto) -->
                     <div style="display: none;">
                         <label for="bot-field">No llenar si eres humano:</label>

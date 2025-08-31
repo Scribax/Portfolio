@@ -1,19 +1,12 @@
 [build]
   publish = "."
 
-# Redirects configuration
+# Form settings
+[build.environment]
+  NETLIFY_USE_EDGE = "false"
+
+# Redirects configuration  
 [[redirects]]
   from = "/thank-you"
   to = "/thank-you.html"
-  status = 200
-
-[[redirects]]
-  from = "/thank-you/"
-  to = "/thank-you.html"
-  status = 200
-
-# SPA fallback
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
   status = 200
