@@ -1046,6 +1046,29 @@ section {
     display: block;
 }
 
+.price-currency {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-left: var(--space-xs);
+}
+
+.service-note {
+    margin-top: var(--space-md);
+    text-align: center;
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.service-note small {
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+    display: block;
+}
+
 .service-btn {
     width: 100%;
     justify-content: center;
