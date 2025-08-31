@@ -522,16 +522,17 @@ function initContactForm() {
             return;
         }
         
+        // Clear any previous errors
+        clearErrorHighlights();
+        clearFormStatus();
+        
         // Show loading state for better UX
         const submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
             submitBtn.classList.add('loading');
         }
-        
-        // Clear any previous errors
-        clearErrorHighlights();
-        clearFormStatus();
         
         // Track successful submission (optional)
         if (typeof gtag !== 'undefined') {
@@ -541,8 +542,8 @@ function initContactForm() {
             });
         }
         
-        // Let the form submit naturally to Netlify
-        // Netlify will handle the redirect to thank-you.html
+        // CRITICAL: Allow form to submit naturally to Netlify
+        // Do NOT preventDefault here - let Netlify handle everything
     });
     
     // Enhanced form validation
