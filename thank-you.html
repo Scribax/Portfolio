@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Mensaje Enviado! - Franco Demartos</title>
+    <meta name="description" content="Gracias por contactarme. Te responderé pronto.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="assets/logo-fd.png" alt="Franco Demartos" class="logo">
+                <span class="logo-text">Franco</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#home" class="nav-link">Inicio</a></li>
+                <li><a href="/#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="/#services" class="nav-link">Servicios</a></li>
+                <li><a href="/#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="/#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="hero thank-you-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="success-animation">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#10b981" stroke-width="2" fill="none"/>
+                        <path d="M9 12l2 2 4-4" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h1 class="hero-title">
+                    ¡<span class="text-gradient">Mensaje Enviado</span>!
+                </h1>
+                <p class="hero-subtitle">
+                    Gracias por contactarme. He recibido tu mensaje y te responderé 
+                    en un plazo máximo de 24 horas. ¡Estoy emocionado de trabajar contigo!
+                </p>
+                
+                <div class="thank-you-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Tiempo de Respuesta</h3>
+                            <p>Máximo 24 horas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Próximo Paso</h3>
+                            <p>Te enviaré una propuesta detallada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="/" class="btn btn-primary">Volver al Inicio</a>
+                    <a href="/#projects" class="btn btn-secondary">Ver Más Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Franco Demartos. Diseñado para convertir.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+        }
+        
+        .success-animation {
+            margin-bottom: var(--space-xl);
+            animation: bounceIn 1s ease;
+        }
+        
+        .success-animation svg {
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .thank-you-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-3xl) 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .info-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            transition: all var(--transition-normal);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .info-icon svg {
+            color: white;
+        }
+        
+        .info-card h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Dark mode styles */
+        [data-theme="dark"] .thank-you-section {
+            background: var(--dark-background);
+        }
+        
+        [data-theme="dark"] .info-card {
+            background: var(--dark-background-alt);
+            border: 1px solid var(--dark-border-color);
+        }
+        
+        [data-theme="dark"] .info-card h3 {
+            color: var(--dark-text-primary);
+        }
+        
+        [data-theme="dark"] .info-card p {
+            color: var(--dark-text-secondary);
+        }
+        
+        [data-theme="dark"] .success-animation svg circle {
+            stroke: #10b981;
+        }
+        
+        [data-theme="dark"] .success-animation svg path {
+            stroke: #10b981;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-info {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+            
+            .info-card {
+                padding: var(--space-lg);
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-md);
+            }
+        }
+    </style>
+</body>
+</html>
