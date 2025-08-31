@@ -543,7 +543,10 @@ function initContactForm() {
         }
         
         // CRITICAL: Allow form to submit naturally to Netlify
-        // Do NOT preventDefault here - let Netlify handle everything
+        // But add a timeout to redirect if Netlify doesn't
+        setTimeout(() => {
+            window.location.href = '/thank-you.html';
+        }, 1000); // Wait 1 second then redirect
     });
     
     // Enhanced form validation
