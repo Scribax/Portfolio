@@ -478,7 +478,6 @@ section {
     text-align: center;
     color: white;
     z-index: 4;
-    position: relative;
 }
 
 .overlay-title {
@@ -788,7 +787,6 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s ease 0.3s;
-    justify-content: center;
 }
 
 .project-card:hover .overlay-tech-stack {
@@ -814,7 +812,6 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s ease 0.4s;
-    justify-content: center;
 }
 
 .project-card:hover .overlay-buttons {
@@ -840,7 +837,6 @@ section {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Responsive for featured project */
 @media (max-width: 768px) {
@@ -950,7 +946,6 @@ section {
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 3;
 }
-
 
 .project-card:hover .project-overlay {
     opacity: 1;

@@ -346,21 +346,84 @@ function initProjectModals() {
 
     // Project data
     const projectsData = {
-        '1': {
-            title: 'TechStore - E-commerce Landing',
-            category: 'E-commerce',
-            description: 'Landing page para una tienda de tecnología que aumentó las conversiones en un 45%. Diseño centrado en productos destacados con call-to-actions estratégicos.',
-            challenge: 'El cliente tenía un bounce rate muy alto (78%) y conversiones bajas. Los usuarios no entendían la propuesta de valor.',
-            solution: 'Implementé un diseño limpio con jerarquía visual clara, testimonios prominentes y un proceso de compra simplificado.',
+        'boston': {
+            title: '🍔 Boston Tracker - Sistema Completo de Tracking',
+            category: 'Full-Stack System',
+            description: 'Sistema integral de seguimiento en tiempo real para deliveries de restaurantes. Solución completa con dashboard web, API backend robusta y aplicación móvil nativa para repartidores.',
+            challenge: 'Boston American Burgers necesitaba automatizar completamente el seguimiento de sus deliveries, eliminando el control manual y optimizando rutas en tiempo real para mejorar la eficiencia operativa.',
+            solution: 'Desarrollé un ecosistema completo de 3 aplicaciones integradas: Dashboard web React con mapas interactivos, API REST con Node.js y PostgreSQL, y app móvil React Native con tracking GPS automático.',
             results: [
-                '+45% en conversiones',
-                '-60% en bounce rate',
-                '+120% tiempo en página',
-                '+85% en CTR del CTA principal'
+                '9,000+ líneas de código',
+                '3 aplicaciones integradas',
+                '25+ endpoints API REST',
+                'Tracking GPS en tiempo real',
+                '99.9% uptime en producción',
+                'Sistema en uso comercial'
             ],
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Shopify', 'Google Analytics'],
-            liveUrl: '#',
-            images: ['assets/project-1-full.jpg', 'assets/project-1-mobile.jpg']
+            technologies: ['React 18', 'Node.js', 'PostgreSQL', 'React Native', 'Socket.io', 'Express.js', 'Leaflet Maps', 'JWT Auth', 'Sequelize ORM', 'Nginx', 'Linux VPS'],
+            architecture: {
+                frontend: 'React 18 + Bootstrap 5 + Leaflet Maps + WebSocket',
+                backend: 'Node.js + Express + PostgreSQL + Socket.io + JWT',
+                mobile: 'React Native + Expo + GPS Tracking',
+                deployment: 'Linux VPS + Nginx + PM2 + SSL'
+            },
+            features: [
+                '✅ Dashboard en tiempo real con WebSocket',
+                '🗺️ Mapas interactivos con tracking GPS en vivo',
+                '📁 Gestión completa de usuarios y deliveries',
+                '📊 Historial de viajes con métricas detalladas',
+                '📱 App móvil nativa con GPS automático',
+                '🔐 Autenticación JWT con roles y permisos',
+                '📈 Analytics automáticos (distancia, tiempo, velocidad)',
+                '📝 Sistema de logs profesional configurable'
+            ],
+            metrics: {
+                codeLines: '9,000+',
+                endpoints: '25+',
+                models: '8 modelos DB',
+                components: '25+ componentes React',
+                screens: '15+ pantallas móviles'
+            },
+            liveUrl: 'http://185.144.157.163/',
+            demoCredentials: {
+                admin: 'admin@bostonburgers.com / password123',
+                delivery: 'DEL001 / delivery123'
+            },
+            github: 'https://github.com/Scribax/BostonTracker',
+            apkUrl: 'http://185.144.157.163/apk/',
+            images: ['assets/project-boston-dashboard.jpg', 'assets/project-boston-mobile.jpg', 'assets/project-boston-map.jpg']
+        },
+        'techstore': {
+            title: '🚀 TechStore - E-commerce Demo Moderno',
+            category: 'E-commerce Web App',
+            description: 'Demo completo de e-commerce tecnológico con carrito funcional, filtros dinámicos, animaciones avanzadas y diseño responsive. Proyecto que demuestra dominio completo del frontend moderno.',
+            challenge: 'Crear una experiencia de e-commerce completa que demuestre habilidades técnicas avanzadas: carrito persistente, filtros en tiempo real, animaciones fluidas y performance optimizada.',
+            solution: 'Desarrollé una web app completa usando tecnologías web puras (Vanilla JS) con arquitectura modular, sistema de estado local, animaciones GPU-aceleradas y diseño mobile-first.',
+            results: [
+                '95+ Lighthouse Score',
+                '5,000+ líneas de código',
+                '100% responsive design',
+                'Carrito persistente funcional',
+                'Animaciones 60fps',
+                'PWA ready con Service Worker'
+            ],
+            technologies: ['HTML5 Semántico', 'CSS3 Avanzado (Grid/Flexbox)', 'JavaScript ES6+', 'Local Storage API', 'Intersection Observer', 'Service Worker'],
+            features: [
+                '🛒 Carrito de compras con localStorage persistente',
+                '🔍 Filtros dinámicos por categorías con animaciones',
+                '📱 Diseño mobile-first completamente responsive', 
+                '⚡ Performance optimizada (sub-2s load time)',
+                '🎨 Animaciones 3D y efectos glassmorphism',
+                '👁️ Modal de vista rápida para productos',
+                '⏱️ Countdown timer en tiempo real',
+                '📊 Estadísticas animadas con scroll',
+                '📝 Formularios validados con estados de carga',
+                '🔔 Sistema de notificaciones toast',
+                '♿ 100% accesible (WCAG 2.1)'
+            ],
+            liveUrl: 'https://scribax.github.io/TechStore---E-commerce-Landing---DEMO/',
+            github: 'https://github.com/Scribax/TechStore---E-commerce-Landing---DEMO',
+            images: ['assets/project-techstore-demo.png']
         },
         '2': {
             title: 'CloudSync - SaaS Platform',
@@ -447,6 +510,238 @@ function initProjectModals() {
     function showProjectModal(project) {
         if (!modalBody) return;
         
+        // Check if this is Boston Tracker to show interactive roadmap
+        if (project.title.includes('Boston Tracker')) {
+            showBostonTrackerModal(project);
+        } else {
+            showStandardModal(project);
+        }
+        
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function showBostonTrackerModal(project) {
+        modalBody.innerHTML = `
+            <div class="project-modal-content boston-tracker-modal">
+                <div class="project-modal-header">
+                    <h2 class="project-modal-title">${project.title}</h2>
+                    <div class="project-status-badges">
+                        <span class="status-badge production">🚀 En Producción</span>
+                        <span class="status-badge commercial">💼 Uso Comercial</span>
+                        <span class="project-modal-category">${project.category}</span>
+                    </div>
+                </div>
+                
+                <div class="project-tabs">
+                    <button class="tab-btn active" data-tab="overview">📊 Overview</button>
+                    <button class="tab-btn" data-tab="roadmap">🗺️ Roadmap</button>
+                    <button class="tab-btn" data-tab="architecture">🏗️ Arquitectura</button>
+                    <button class="tab-btn" data-tab="demo">🚀 Demo</button>
+                </div>
+                
+                <div class="tab-content active" id="overview">
+                    <div class="project-modal-description">
+                        <p>${project.description}</p>
+                    </div>
+                    
+                    <div class="project-metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon">💻</div>
+                            <div class="metric-value">${project.metrics.codeLines}</div>
+                            <div class="metric-label">Líneas de Código</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">🔌</div>
+                            <div class="metric-value">${project.metrics.endpoints}</div>
+                            <div class="metric-label">API Endpoints</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">📱</div>
+                            <div class="metric-value">${project.metrics.screens}</div>
+                            <div class="metric-label">Pantallas Móviles</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">⚡</div>
+                            <div class="metric-value">99.9%</div>
+                            <div class="metric-label">Uptime</div>
+                        </div>
+                    </div>
+                    
+                    <div class="features-showcase">
+                        <h3>🎯 Características Principales</h3>
+                        <div class="features-grid">
+                            ${project.features.map(feature => `<div class="feature-item">${feature}</div>`).join('')}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="roadmap">
+                    <div class="roadmap-container">
+                        <h3>🗺️ Roadmap de Desarrollo Interactivo</h3>
+                        <div class="roadmap-timeline">
+                            <div class="roadmap-phase completed" data-phase="1">
+                                <div class="phase-marker">✅</div>
+                                <div class="phase-content">
+                                    <h4>Fase 1: Fundación (Completada)</h4>
+                                    <ul>
+                                        <li>✅ Configuración inicial del proyecto</li>
+                                        <li>✅ Base de datos PostgreSQL</li>
+                                        <li>✅ API REST con Node.js</li>
+                                        <li>✅ Autenticación JWT</li>
+                                    </ul>
+                                    <div class="phase-tech">Node.js • PostgreSQL • JWT</div>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-phase completed" data-phase="2">
+                                <div class="phase-marker">✅</div>
+                                <div class="phase-content">
+                                    <h4>Fase 2: Dashboard Web (Completada)</h4>
+                                    <ul>
+                                        <li>✅ Interfaz React 18</li>
+                                        <li>✅ Mapas interactivos Leaflet</li>
+                                        <li>✅ WebSocket en tiempo real</li>
+                                        <li>✅ Gestión de usuarios</li>
+                                    </ul>
+                                    <div class="phase-tech">React 18 • Leaflet • Socket.io</div>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-phase completed" data-phase="3">
+                                <div class="phase-marker">✅</div>
+                                <div class="phase-content">
+                                    <h4>Fase 3: App Móvil (Completada)</h4>
+                                    <ul>
+                                        <li>✅ React Native con Expo</li>
+                                        <li>✅ Tracking GPS automático</li>
+                                        <li>✅ Notificaciones push</li>
+                                        <li>✅ Sincronización offline</li>
+                                    </ul>
+                                    <div class="phase-tech">React Native • GPS • Push Notifications</div>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-phase completed" data-phase="4">
+                                <div class="phase-marker">✅</div>
+                                <div class="phase-content">
+                                    <h4>Fase 4: Producción (Completada)</h4>
+                                    <ul>
+                                        <li>✅ Deploy en Linux VPS</li>
+                                        <li>✅ Configuración Nginx</li>
+                                        <li>✅ SSL y optimizaciones</li>
+                                        <li>✅ Monitoreo y logs</li>
+                                    </ul>
+                                    <div class="phase-tech">Linux VPS • Nginx • SSL • PM2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="architecture">
+                    <div class="architecture-diagram">
+                        <h3>🏗️ Arquitectura del Sistema</h3>
+                        <div class="arch-layers">
+                            <div class="arch-layer frontend">
+                                <h4>🖥️ Frontend Layer</h4>
+                                <div class="arch-components">
+                                    <div class="arch-component">React 18 Dashboard</div>
+                                    <div class="arch-component">Bootstrap 5 UI</div>
+                                    <div class="arch-component">Leaflet Maps</div>
+                                    <div class="arch-component">WebSocket Client</div>
+                                </div>
+                            </div>
+                            
+                            <div class="arch-layer api">
+                                <h4>🔌 API Layer</h4>
+                                <div class="arch-components">
+                                    <div class="arch-component">Express.js Server</div>
+                                    <div class="arch-component">JWT Authentication</div>
+                                    <div class="arch-component">Socket.io Server</div>
+                                    <div class="arch-component">25+ REST Endpoints</div>
+                                </div>
+                            </div>
+                            
+                            <div class="arch-layer database">
+                                <h4>🗄️ Data Layer</h4>
+                                <div class="arch-components">
+                                    <div class="arch-component">PostgreSQL Database</div>
+                                    <div class="arch-component">Sequelize ORM</div>
+                                    <div class="arch-component">8 Data Models</div>
+                                    <div class="arch-component">Backup System</div>
+                                </div>
+                            </div>
+                            
+                            <div class="arch-layer mobile">
+                                <h4>📱 Mobile Layer</h4>
+                                <div class="arch-components">
+                                    <div class="arch-component">React Native App</div>
+                                    <div class="arch-component">GPS Tracking</div>
+                                    <div class="arch-component">Push Notifications</div>
+                                    <div class="arch-component">Offline Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="demo">
+                    <div class="demo-section">
+                        <h3>🚀 Demo Interactivo</h3>
+                        <div class="demo-cards">
+                            <div class="demo-card">
+                                <h4>💻 Dashboard Boston Tracker</h4>
+                                <p>Explora la demostración completa del sistema de gestión de deliveries con mapa interactivo de Boston, tracking en tiempo real y todas las funcionalidades administrativas.</p>
+                                <div class="demo-credentials">
+                                    <strong>🌐 Demo Público</strong><br>
+                                    ✓ Acceso directo sin registro<br>
+                                    ✓ Datos de demostración incluidos<br>
+                                    ✓ Todas las funcionalidades activas
+                                </div>
+                                <div class="demo-features">
+                                    <span>🗺️ Mapa Interactivo</span>
+                                    <span>📍 Tracking GPS</span>
+                                    <span>👥 Gestión Usuarios</span>
+                                    <span>📱 Admin APK</span>
+                                    <span>📊 Historial Viajes</span>
+                                    <span>🎛️ Dashboard Completo</span>
+                                </div>
+                                <a href="https://scribax.github.io/BostonTracker-Demo/" target="_blank" class="demo-btn primary">🚀 Explorar Demo</a>
+                                <a href="https://github.com/Scribax/BostonTracker-Demo" target="_blank" class="demo-btn github">📂 Ver Código</a>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-highlights">
+                            <h4>🌟 Características del Demo</h4>
+                            <div class="highlights-grid">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🗺️</div>
+                                    <h5>Mapa de Boston</h5>
+                                    <p>Ubicaciones reales de restaurantes y rutas de entrega visualizadas</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">⚡</div>
+                                    <h5>Tiempo Real</h5>
+                                    <p>Simulación de tracking en vivo con actualizaciones automáticas</p>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">📊</div>
+                                    <h5>Dashboard Completo</h5>
+                                    <p>Interfaz administrativa con métricas y gestión avanzada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Initialize interactive elements
+        initBostonTrackerInteractions();
+    }
+    
+    function showStandardModal(project) {
         modalBody.innerHTML = `
             <div class="project-modal-content">
                 <div class="project-modal-header">
@@ -485,9 +780,6 @@ function initProjectModals() {
                 </div>
             </div>
         `;
-        
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
@@ -1090,4 +1382,309 @@ if (window.matchMedia) {
             document.body.setAttribute('data-theme', newTheme);
         }
     });
+}
+
+// Boston Tracker Modal Interactions
+function initBostonTrackerInteractions() {
+    console.log('Initializing Boston Tracker interactive elements...');
+    
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+            
+            // Add click animation
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+            
+            // Initialize specific interactions for roadmap tab
+            if (targetTab === 'roadmap') {
+                initRoadmapInteractions();
+            }
+            
+            // Initialize architecture interactions
+            if (targetTab === 'architecture') {
+                initArchitectureInteractions();
+            }
+        });
+    });
+    
+    // Initialize metric cards animations
+    initMetricCardsAnimations();
+    
+    // Initialize features showcase
+    initFeaturesShowcase();
+    
+    console.log('Boston Tracker interactions initialized successfully');
+}
+
+// Roadmap Interactive Functionality
+function initRoadmapInteractions() {
+    const roadmapPhases = document.querySelectorAll('.roadmap-phase');
+    
+    roadmapPhases.forEach((phase, index) => {
+        // Add entrance animation delay
+        phase.style.animationDelay = `${index * 0.2}s`;
+        phase.classList.add('animate-in');
+        
+        // Click interaction
+        phase.addEventListener('click', function() {
+            // Toggle expanded state
+            this.classList.toggle('expanded');
+            
+            // Add ripple effect
+            const ripple = document.createElement('div');
+            ripple.className = 'phase-ripple';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                if (this.contains(ripple)) {
+                    this.removeChild(ripple);
+                }
+            }, 600);
+            
+            // Show phase details with animation
+            const content = this.querySelector('.phase-content');
+            if (content) {
+                content.style.transform = this.classList.contains('expanded') 
+                    ? 'scale(1.02)' : 'scale(1)';
+            }
+        });
+        
+        // Hover effects
+        phase.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(10px) scale(1.02)';
+            this.style.boxShadow = '0 8px 25px rgba(59, 130, 246, 0.15)';
+            
+            // Highlight connected phases
+            const phaseNumber = parseInt(this.getAttribute('data-phase'));
+            roadmapPhases.forEach(p => {
+                const pNumber = parseInt(p.getAttribute('data-phase'));
+                if (Math.abs(pNumber - phaseNumber) === 1) {
+                    p.style.opacity = '0.7';
+                    p.style.transform = 'scale(0.98)';
+                }
+            });
+        });
+        
+        phase.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+            
+            // Reset connected phases
+            roadmapPhases.forEach(p => {
+                p.style.opacity = '';
+                p.style.transform = '';
+            });
+        });
+    });
+    
+    // Progress line animation
+    animateProgressLine();
+}
+
+// Architecture Interactions
+function initArchitectureInteractions() {
+    const archLayers = document.querySelectorAll('.arch-layer');
+    const archComponents = document.querySelectorAll('.arch-component');
+    
+    archLayers.forEach((layer, index) => {
+        // Staggered entrance animation
+        layer.style.animationDelay = `${index * 0.3}s`;
+        layer.classList.add('arch-animate-in');
+        
+        // Layer interactions
+        layer.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.zIndex = '10';
+            
+            // Dim other layers
+            archLayers.forEach(l => {
+                if (l !== this) {
+                    l.style.opacity = '0.3';
+                    l.style.transform = 'scale(0.95)';
+                }
+            });
+        });
+        
+        layer.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.zIndex = '';
+            
+            // Reset other layers
+            archLayers.forEach(l => {
+                l.style.opacity = '';
+                l.style.transform = '';
+            });
+        });
+    });
+    
+    // Component interactions
+    archComponents.forEach((component, index) => {
+        component.addEventListener('click', function() {
+            // Add tech badge animation
+            this.classList.add('component-selected');
+            
+            // Create floating tech info
+            showTechInfo(this, this.textContent);
+            
+            setTimeout(() => {
+                this.classList.remove('component-selected');
+            }, 1000);
+        });
+    });
+}
+
+// Metric Cards Animations
+function initMetricCardsAnimations() {
+    const metricCards = document.querySelectorAll('.metric-card');
+    
+    metricCards.forEach((card, index) => {
+        // Staggered entrance
+        setTimeout(() => {
+            card.classList.add('metric-animate-in');
+        }, index * 150);
+        
+        // Counter animation for values
+        const valueElement = card.querySelector('.metric-value');
+        if (valueElement) {
+            animateMetricValue(valueElement);
+        }
+        
+        // Hover interactions
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) rotateY(5deg)';
+            this.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.2)';
+            
+            // Icon bounce
+            const icon = this.querySelector('.metric-icon');
+            if (icon) {
+                icon.style.transform = 'scale(1.3) rotateZ(10deg)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+            
+            const icon = this.querySelector('.metric-icon');
+            if (icon) {
+                icon.style.transform = '';
+            }
+        });
+    });
+}
+
+// Features Showcase Animation
+function initFeaturesShowcase() {
+    const featureItems = document.querySelectorAll('.feature-item');
+    
+    featureItems.forEach((item, index) => {
+        // Staggered entrance
+        setTimeout(() => {
+            item.classList.add('feature-animate-in');
+        }, index * 100);
+        
+        // Hover effects
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) translateY(-5px)';
+            this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1))';
+            
+            // Add glow effect
+            this.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.15)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.background = '';
+            this.style.boxShadow = '';
+        });
+    });
+}
+
+// Utility Functions for Boston Tracker Modal
+function animateProgressLine() {
+    const timeline = document.querySelector('.roadmap-timeline');
+    if (!timeline) return;
+    
+    // Create progress line
+    const progressLine = document.createElement('div');
+    progressLine.className = 'roadmap-progress-line';
+    timeline.appendChild(progressLine);
+    
+    // Animate progress line
+    setTimeout(() => {
+        progressLine.style.height = '100%';
+    }, 500);
+}
+
+function animateMetricValue(element) {
+    const text = element.textContent;
+    const number = parseInt(text.replace(/[^0-9]/g, '')) || 0;
+    const suffix = text.replace(/[0-9]/g, '').replace(/\+/g, '');
+    const hasPlus = text.includes('+');
+    
+    let current = 0;
+    const duration = 2000;
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        
+        current = Math.floor(number * easeOutQuart);
+        element.textContent = `${current}${suffix}${hasPlus ? '+' : ''}`;
+        
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+    
+    // Start animation after a delay
+    setTimeout(() => {
+        requestAnimationFrame(update);
+    }, 300);
+}
+
+function showTechInfo(element, techName) {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tech-tooltip';
+    tooltip.textContent = `${techName} - Tecnología utilizada`;
+    
+    document.body.appendChild(tooltip);
+    
+    const rect = element.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+    tooltip.style.top = `${rect.top - 40}px`;
+    tooltip.style.transform = 'translateX(-50%)';
+    
+    setTimeout(() => {
+        tooltip.classList.add('show');
+    }, 10);
+    
+    setTimeout(() => {
+        tooltip.classList.remove('show');
+        setTimeout(() => {
+            if (document.body.contains(tooltip)) {
+                document.body.removeChild(tooltip);
+            }
+        }, 300);
+    }, 2000);
 }

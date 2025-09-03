@@ -120,12 +120,12 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Diseño <span class="text-gradient">Landing Pages</span><br>
-                    que Convierten
+                    <span class="text-gradient">Full-Stack Developer</span><br>
+                    & Mobile App Developer
                 </h1>
                 <p class="hero-subtitle">
-                    Creo páginas de aterrizaje minimalistas y efectivas que transforman 
-                    visitantes en clientes. Diseño centrado en conversión y experiencia de usuario.
+                    Desarrollo soluciones completas: Web Apps, APIs robustas, Apps Móviles y Landing Pages 
+                    que convierten. Desde el concepto hasta el despliegue en producción.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
@@ -141,45 +141,101 @@
             <div class="section-header">
                 <h2 class="section-title">Proyectos Destacados</h2>
                 <p class="section-subtitle">
-                    Una selección de landing pages que han generado resultados excepcionales
+                    Una selección de proyectos completos: Web Apps, APIs, Mobile Apps y Landing Pages
                 </p>
             </div>
 
             <!-- Project Filter -->
             <div class="project-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-                <button class="filter-btn" data-filter="saas">SaaS</button>
-                <button class="filter-btn" data-filter="services">Servicios</button>
-                <button class="filter-btn" data-filter="startup">Startups</button>
+                <button class="filter-btn" data-filter="webapp">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="filter-btn" data-filter="backend">APIs</button>
             </div>
 
             <!-- Projects Grid -->
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card" data-category="ecommerce">
+                <!-- Project STAR: Boston Tracker -->
+                <article class="project-card featured featured-project" data-category="fullstack">
                     <div class="project-image">
-                        <img src="assets/project-1.jpg" alt="TechStore Landing Page" loading="lazy">
-                        <div class="project-tag">Destacado</div>
+                        <img src="assets/project-boston-tracker.png" alt="Boston Tracker - Sistema Completo" loading="lazy">
+                        <div class="project-tag premium-tag">🔥 PROYECTO ESTRELLA</div>
                         <div class="project-overlay">
                             <div class="project-overlay-content">
-                                <h4 class="overlay-title">TechStore E-commerce</h4>
-                                <p class="overlay-description">Landing optimizada que aumentó conversiones 45% con diseño centrado en productos</p>
-                                <button class="btn-view" data-project="1">Ver Detalles</button>
+                                <h4 class="overlay-title">Boston Tracker</h4>
+                                <p class="overlay-description">Sistema completo de tracking GPS: React Dashboard + API REST + App Móvil nativa</p>
+                                <div class="overlay-tech-stack">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">React Native</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                                <div class="overlay-buttons">
+                                    <button class="btn-view" data-project="boston">Ver Detalles</button>
+                                    <a href="http://185.144.157.163/" target="_blank" class="btn-demo">Demo Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">TechStore</h3>
-                        <p class="project-category">E-commerce</p>
+                        <h3 class="project-title">Boston Tracker</h3>
+                        <p class="project-category">Sistema Full-Stack Completo</p>
                         <div class="project-metrics">
                             <span class="metric">
-                                <strong>+45%</strong>
-                                <span>Conversión</span>
+                                <strong>9,000+</strong>
+                                <span>Líneas de código</span>
                             </span>
                             <span class="metric">
-                                <strong>-60%</strong>
-                                <span>Bounce Rate</span>
+                                <strong>3</strong>
+                                <span>Apps integradas</span>
+                            </span>
+                            <span class="metric">
+                                <strong>25+</strong>
+                                <span>API Endpoints</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 1: TechStore Demo -->
+                <article class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <img src="assets/project-techstore-demo.png" alt="TechStore E-commerce Demo" loading="lazy">
+                        <div class="project-tag new-tag">🚀 DEMO EN VIVO</div>
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h4 class="overlay-title">TechStore E-commerce</h4>
+                                <p class="overlay-description">E-commerce moderno con carrito funcional, filtros dinámicos y animaciones avanzadas</p>
+                                <div class="overlay-tech-stack">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">PWA</span>
+                                </div>
+                                <div class="overlay-buttons">
+                                    <button class="btn-view" data-project="techstore">Ver Detalles</button>
+                                    <a href="https://scribax.github.io/TechStore---E-commerce-Landing---DEMO/" target="_blank" class="btn-demo">Demo Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">TechStore Demo</h3>
+                        <p class="project-category">E-commerce Web App</p>
+                        <div class="project-metrics">
+                            <span class="metric">
+                                <strong>95+</strong>
+                                <span>Lighthouse Score</span>
+                            </span>
+                            <span class="metric">
+                                <strong>100%</strong>
+                                <span>Responsive</span>
+                            </span>
+                            <span class="metric">
+                                <strong>5,000+</strong>
+                                <span>Líneas código</span>
                             </span>
                         </div>
                     </div>
@@ -281,73 +337,12 @@
             <div class="section-header">
                 <h2 class="section-title">Mis Servicios</h2>
                 <p class="section-subtitle">
-                    Todo lo que necesitas para crear landing pages que conviertan
+                    Desarrollo completo: desde landing pages hasta sistemas complejos con backend y móvil
                 </p>
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z" fill="currentColor"/>
-                            <path d="M7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Diseño Completo</h3>
-                    <p class="service-description">
-                        Diseño desde cero de tu landing page, incluyendo wireframes, 
-                        mockups y prototipo interactivo.
-                    </p>
-                    <ul class="service-features">
-                        <li>Investigación UX</li>
-                        <li>Wireframes y mockups</li>
-                        <li>Prototipo interactivo</li>
-                        <li>Guía de estilos</li>
-                        <li>3 rondas de revisión</li>
-                    </ul>
-                    <div class="service-price">
-                        <span class="price-from">Desde</span>
-                        <span class="price-amount">$15.000</span>
-                        <span class="price-currency">ARS</span>
-                    </div>
-                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card featured">
-                    <div class="service-badge">Más Popular</div>
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" fill="currentColor"/>
-                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Diseño + Desarrollo</h3>
-                    <p class="service-description">
-                        Servicio completo: diseño y desarrollo de tu landing page 
-                        lista para publicar y optimizada para conversiones.
-                    </p>
-                    <ul class="service-features">
-                        <li>Todo lo del plan anterior</li>
-                        <li>Desarrollo responsive</li>
-                        <li>Optimización SEO</li>
-                        <li>Integración con analytics</li>
-                        <li>Formularios funcionales</li>
-                        <li>30 días de soporte</li>
-                    </ul>
-                    <div class="service-price">
-                        <span class="price-from">Desde</span>
-                        <span class="price-amount">$30.000</span>
-                        <span class="price-currency">ARS</span>
-                    </div>
-                    <div class="service-note">
-                        <small>* Dominio y hosting configurados incluidos. Mantenimiento mensual a cargo del cliente.</small>
-                    </div>
-                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
-                </div>
-
-                <!-- Service 3 -->
+                <!-- Service 1: Optimización CRO -->
                 <div class="service-card">
                     <div class="service-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -356,20 +351,167 @@
                     </div>
                     <h3 class="service-title">Optimización CRO</h3>
                     <p class="service-description">
-                        Mejoro tu landing page existente con técnicas de CRO para 
-                        aumentar significativamente tus conversiones.
+                        Mejoro tus landing pages o aplicaciones existentes 
+                        con técnicas de optimización de conversión.
                     </p>
                     <ul class="service-features">
-                        <li>Auditoría completa</li>
-                        <li>A/B Testing</li>
-                        <li>Optimización UX</li>
+                        <li>Auditoría técnica completa</li>
+                        <li>A/B Testing implementación</li>
+                        <li>Optimización de rendimiento</li>
                         <li>Análisis de métricas</li>
-                        <li>Reporte detallado</li>
+                        <li>Reporte con recomendaciones</li>
                     </ul>
                     <div class="service-price">
                         <span class="price-from">Desde</span>
-                        <span class="price-amount">$9.000</span>
+                        <span class="price-amount">$25.000</span>
                         <span class="price-currency">ARS</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
+                </div>
+
+                <!-- Service 2: Landing Pages -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z" fill="currentColor"/>
+                            <path d="M7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Landing Pages</h3>
+                    <p class="service-description">
+                        Páginas de alto impacto optimizadas para conversión. 
+                        Diseño, desarrollo y optimización completa.
+                    </p>
+                    <ul class="service-features">
+                        <li>Investigación UX y wireframes</li>
+                        <li>Diseño responsive</li>
+                        <li>Desarrollo optimizado</li>
+                        <li>A/B Testing y CRO</li>
+                        <li>Integración con analytics</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$35.000</span>
+                        <span class="price-currency">ARS</span>
+                    </div>
+                    <div class="service-note">
+                        <small>+ Dominio propio y hosting por solo $15.000 ARS/año</small>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
+                </div>
+
+                <!-- Service 3: APIs & Backend -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">APIs & Backend</h3>
+                    <p class="service-description">
+                        APIs REST robustas, microservicios y backend escalable. 
+                        Integración con terceros y arquitectura de datos.
+                    </p>
+                    <ul class="service-features">
+                        <li>APIs REST con documentación</li>
+                        <li>Arquitectura escalable</li>
+                        <li>Integración con servicios externos</li>
+                        <li>Seguridad y autenticación JWT</li>
+                        <li>Monitoreo y logging</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$65.000</span>
+                        <span class="price-currency">ARS</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
+                </div>
+
+                <!-- Service 4: Aplicaciones Web -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Aplicaciones Web</h3>
+                    <p class="service-description">
+                        Web apps completas con React, Node.js y bases de datos. 
+                        Dashboard, sistemas de gestión y SaaS.
+                    </p>
+                    <ul class="service-features">
+                        <li>Frontend con React/Next.js</li>
+                        <li>Backend con Node.js/Express</li>
+                        <li>Base de datos (MongoDB/PostgreSQL)</li>
+                        <li>Autenticación y seguridad</li>
+                        <li>Deploy en producción</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$100.000</span>
+                        <span class="price-currency">ARS</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
+                </div>
+
+                <!-- Service 5: Apps Móviles -->
+                <div class="service-card featured">
+                    <div class="service-badge">Completo</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM7 4V3h10v1H7zm0 14V6h10v12H7zm0 3v-1h10v1H7z" fill="currentColor"/>
+                            <circle cx="12" cy="16" r="1.5" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Apps Móviles Android</h3>
+                    <p class="service-description">
+                        Apps nativas Android con Java/Kotlin. Desde MVPs hasta 
+                        aplicaciones complejas con backend integrado.
+                    </p>
+                    <ul class="service-features">
+                        <li>Desarrollo nativo Android</li>
+                        <li>UI/UX optimizada para móvil</li>
+                        <li>Integración con APIs</li>
+                        <li>Base de datos local y remota</li>
+                        <li>Deploy en Google Play</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$150.000</span>
+                        <span class="price-currency">ARS</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
+                </div>
+
+                <!-- Service 6: Sistemas Completos -->
+                <div class="service-card premium">
+                    <div class="service-badge">Premium</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" fill="currentColor"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Sistema Completo</h3>
+                    <p class="service-description">
+                        Solución integral: Web App + API + Mobile App. 
+                        Arquitectura completa para proyectos empresariales.
+                    </p>
+                    <ul class="service-features">
+                        <li>Web App completa (React/Next.js)</li>
+                        <li>API robusta y escalable</li>
+                        <li>App móvil Android nativa</li>
+                        <li>Panel de administración</li>
+                        <li>Despliegue e infraestructura</li>
+                        <li>3 meses de soporte incluido</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$320.000</span>
+                        <span class="price-currency">ARS</span>
+                    </div>
+                    <div class="service-note">
+                        <small>* Proyecto como el sistema de tracking. Incluye arquitectura completa y documentación técnica.</small>
                     </div>
                     <a href="#contact" class="btn btn-primary service-btn">Empezar Proyecto</a>
                 </div>
